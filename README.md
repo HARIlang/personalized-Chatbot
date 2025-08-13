@@ -16,3 +16,12 @@ This is the backend for a customizable AI-powered chatbot built with **Node.js**
 
 ## 🛠 Tech Used
 `Node.js` `Express.js` `Axios` `Dotenv` `CORS` `Nodemon`
+
+## 🖼 Screenshots
+
+
+
+**Chatbot Interaction Example:**  
+![Chatbot Interaction](screenshots/chatbot1.png)
+![](screenshots/chatbot2.png)
+![](screenshots/chatbot3.png)
