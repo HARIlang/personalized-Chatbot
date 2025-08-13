@@ -1,0 +1,80 @@
+Personalized AI Chatbot (Backend)
+---------------------------------
+
+This is the backend for a customizable AI-powered chatbot built with Node.js, Express, and the Groq API.
+
+Features:
+- Fully customizable for portfolios, business FAQs, or customer support.
+- Uses environment variables to securely store personal/business details and API keys.
+- Responds naturally using the LLaMA 3 AI model.
+- Auto-detects and responds to contact-related queries.
+- Supports Markdown formatting for cleaner, richer responses.
+- Modular architecture for easy maintenance and feature expansion.
+
+Project Structure:
+backend/
+│
+├── controller/     # Chatbot logic and API integration with Groq
+├── routes/         # API route definitions (optional if expanded)
+├── .env            # Stores sensitive configuration values
+├── .gitignore      # Prevents sensitive or unnecessary files from being pushed
+├── server.js       # Main entry point for backend server
+
+Setup:
+1. Install dependencies:
+   cd project_folder
+   cd backend
+   npm init -y
+   npm i express axios cors dotenv
+   # Optional: Install nodemon for auto-restart during development
+   npm i -D nodemon
+
+2. Create a .env file with:
+   GROQ_API_KEY=your_groq_api_key_here
+   PERSONAL_INFO="Replace this with your contact details, portfolio summary, project list, skills, or FAQs."
+   PORT=5000
+
+3. Start the server:
+   node server.js
+   # or (for development)
+   nodemon server.js
+
+The chatbot API will be available at:
+http://localhost:5000
+(You can change the port via the PORT variable in .env)
+
+Notes & Recommendations:
+1. Create a Groq account and obtain your API key from their dashboard.
+2. The LLaMA 3 model will not provide personal information unless explicitly included in the prompt or environment variables.
+   - To make your chatbot respond meaningfully, include contact details, portfolio summaries, skills, project lists, or FAQs inside the PERSONAL_INFO variable.
+3. Always keep .env in .gitignore to prevent API key leaks.
+4. For deployment (e.g., on Vercel, Render, or Railway), set environment variables in the hosting platform’s dashboard instead of pushing .env to Git.
+5. If you connect a frontend, make sure CORS is configured correctly to allow browser requests.
+
+Example PERSONAL_INFO structure:
+PERSONAL_INFO="
+Full Name: John Doe
+Location: New York, USA
+Phone: +1-555-123-4567
+LinkedIn: https://linkedin.com/in/johndoe
+GitHub: https://github.com/johndoe
+Email: johndoe@example.com
+
+Professional Summary:
+Full-stack developer with expertise in React, Node.js, and MongoDB.
+
+Technical Skills:
+- Frontend: React.js, Next.js, Tailwind CSS
+- Backend: Node.js, Express.js
+- Database: MongoDB, MySQL
+- Tools: Git, GitHub, Postman
+
+Projects:
+- AI Chatbot – Customizable chatbot using Groq API
+- Portfolio Website – Built with React and Tailwind CSS
+
+Education:
+B.Sc. Computer Science – Example University
+
+Languages:
+English (Fluent)
